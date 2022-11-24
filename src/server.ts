@@ -4,6 +4,7 @@ import { config } from "./config/config";
 import Logging from "./library/Logging";
 import authorRoutes from "./routes/Author";
 import bookRoutes from "./routes/Book";
+import publisherRoutes from "./routes/Publisher";
 
 const router = express();
 
@@ -47,6 +48,7 @@ const startServer = () => {
 	// Routes //
 	router.use("/", authorRoutes);
 	router.use("/", bookRoutes);
+	router.use("/", publisherRoutes);
 
 
 	// HealthCheck //
